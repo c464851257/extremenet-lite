@@ -1,4 +1,4 @@
-### 代码基于https://github.com/xingyizhou/ExtremeNet修改 
+### 代码基于https://github.com/xingyizhou/ExtremeNet 修改 
 ## 训练流程
 ### 1.制作数据集
 提供coco数据分割数据集格式转extremenet格式代码，
