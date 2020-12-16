@@ -31,7 +31,7 @@ ${ExtremeNet_ROOT}
 ### 5.参数配置
 修改config/ExtremeNet.json文件，根据自己的需求设置 batch_size, max_iter, stepsize, snapshot, chunk_sizes, categories。
 
-### 【特别注意】代码块第22行chunk_sizes中的所有数加起来等于batch_size。若用2个GPU训练ExtremeNet并且batch_size等于6则chunk_sizes应为[3, 3]。
+### 【特别注意】chunk_sizes中的所有数加起来等于batch_size。若用2个GPU训练ExtremeNet并且batch_size等于6则chunk_sizes应为[3, 3]。
 
 ### 6.模型压缩
 代码修改残差块的卷积为深度可分离卷积，若要使用深度可分离卷积，则将models/py_utils/utils.py文件代码第5行设置为True。
