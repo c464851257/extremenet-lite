@@ -38,3 +38,22 @@ ${ExtremeNet_ROOT}
 #### 修改了原代码的边缘聚合部分，并用numba进行加速，大大缩短了推理时间。
 #### 增加了深度可分离卷积模块。
 #### 模型推理时间从0.3压缩到了0.04
+
+## 模型部署
+这里只介绍如何将torch模型转为tensorrt支持的torchscript格式
+### 1.将torch模型转为tensorrt支持的torchscript格式
+运行torchScript.py即可将模型转为torchscript格式，并将模型命名为model.pt放入tensorrt/torch_script/model_repository/extremenet/1/目录下
+### 2.config.pbtxt
+ 变量名称  | 内容说明  |
+ ---- | ----- | ------  
+ name  | 模型名称 | 
+ platform  | 对应的模型类型，这里是torchscript所以为 "pytorch_libtorch" |  
+ name  | 模型名称 | 
+ platform  | 对应的模型类型，这里是torchscript所以为 "pytorch_libtorch" |  
+ max_batch_size  | 若无要求就填为0即可 | 
+ input.name  | 对网络输入节点名称 |  
+ output.name  | 输出的节点名称，在output的大括号中添加output的节点 | 
+ output.dims  | 输出变量的shape |  
+ 
+ ### 模型转换好以后进入tensorrt/extremenet_py目录下运行extremenet_pyextremenetClientModule_test.py
+
