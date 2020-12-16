@@ -1,0 +1,57 @@
+name: "extremenet"
+platform: "pytorch_libtorch"
+max_batch_size: 0
+input {
+    name: "unscaledmels__0"
+    data_type: TYPE_FP32
+    dims: -1
+    dims: 3
+    dims: -1
+    dims: -1
+  }
+output [{
+    name: "audiodata__0"
+    data_type: TYPE_FP32
+    dims: [2, -1, -1, -1]
+  },
+  {
+    name: "audiodata__1"
+    data_type: TYPE_FP32
+    dims: [2, -1, -1, -1]
+  },
+  {
+    name: "audiodata__2"
+    data_type: TYPE_FP32
+    dims: [2, -1, -1, -1]
+  },
+  {
+    name: "audiodata__3"
+    data_type: TYPE_FP32
+    dims: [2, -1, -1, -1]
+  },
+  {
+    name: "audiodata__4"
+    data_type: TYPE_FP32
+    dims: [2, -1, -1, -1]
+  },
+  {
+    name: "audiodata__5"
+    data_type: TYPE_FP32
+    dims: [2, -1, -1, -1]
+  },
+  {
+    name: "audiodata__6"
+    data_type: TYPE_FP32
+    dims: [2, -1, -1, -1]
+  },
+  {
+    name: "audiodata__7"
+    data_type: TYPE_FP32
+    dims: [2, -1, -1, -1]
+  },
+  {
+    name: "audiodata__8"
+    data_type: TYPE_FP32
+    dims: [2, -1, -1, -1]
+  }
+]
